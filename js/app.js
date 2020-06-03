@@ -73,15 +73,16 @@ var beforeNinetiesLowerCase = beforeNineties.toLowerCase();
   }
 
   let favNumber = prompt('What do you think my favorite number is? hint: try from 0 to 15')
+  const correctNumber = Math.floor(Math.random() * 16);
   for(let i = 0; i <= 3; i++){
     if(i === 3){
-      alert('My favorite number is 7!')
+      alert('My favorite number is ' + correctNumber + '!')
     }else{
-      if (parseInt(favNumber) < 7){
+      if (parseInt(favNumber) < correctNumber){
         favNumber = prompt('try higher');
-      }else if(parseInt(favNumber) > 7){
+      }else if(parseInt(favNumber) > correctNumber){
         favNumber = prompt('try lower');
-      }else if(parseInt(favNumber) === 7){
+      }else if(parseInt(favNumber) === correctNumber){
         count++;
         alert('Great Job! you got it right!')
         i=4;
