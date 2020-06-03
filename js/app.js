@@ -72,9 +72,25 @@ var beforeNinetiesLowerCase = beforeNineties.toLowerCase();
     alert("Not a Valid Answer!")
   }
 
+  function FavNumber(favNumber){
+    for(let i = 0; i < 3; i++){
+      if (parseInt(favNumber) < 7){
+        favNumber = prompt('try higher');
+      }else if(parseInt(favNumber) > 7){
+        favNumber = prompt('try lower');
+      }else if(parseInt(favNumber) === 7){
+        count++;
+        return alert('Great Job! you got it right!')
+      }else{
+        favNumber = prompt('must enter a number')
+      }
+    }
+    return alert('My favorite number is 7!')
+  }
+  FavNumber(prompt('What do you think my favorite number is? hint: try from 0 to 15'));
 
 
-alert('You got ' + count + ' questions correct out of 5.')
+alert('You got ' + count + ' questions correct out of 6.')
 
 if (userName !== null){
   alert(userName + ' now you know a little about me! Here is some more information about me.')
