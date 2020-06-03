@@ -87,14 +87,6 @@ for(let i = 0; i < questionsArray.length; i++ ){
   }
 }
 
-
-
-
-
-
-
-
-
   let favNumber = prompt('What do you think my favorite number is? hint: try from 0 to 15')
   const correctNumber = Math.floor(Math.random() * 16);
   for(let i = 0; i <= 3; i++){
