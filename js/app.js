@@ -89,8 +89,30 @@ var beforeNinetiesLowerCase = beforeNineties.toLowerCase();
   }
   FavNumber(prompt('What do you think my favorite number is? hint: try from 0 to 15'));
 
+  function FavExercises(favExerciseGuess){
+    const favExercises = ['squat', 'bench', 'deadlift', 'shoulder press'];
+    let objExercises = {};
+    let favExerciseGuessLowerCase = favExerciseGuess.toLowerCase();
+    for(let i of favExercises){ 
+      objExercises[i] =  (objExercises[i] || 0) +1;
+    }
+    for (let j = 0; j < 5; j++){
+      if (objExercises[favExerciseGuessLowerCase]){
+        count++;
+        return alert('Congratulations! You got one of my top 4 favorite exercises!')
+      }else{
+        favExerciseGuessLowerCase = prompt('Try again').toLowerCase
+      }
+    }
+    return alert('My top four favorite exercises are '+ 
+      favExercises[0] + ", "+ 
+      favExercises[1] + ", "+ 
+      favExercises[2] + " and "+ 
+      favExercises[3] + ".")
+  }
+  FavExercises(prompt('What exercise is in my top four favorite?'))
 
-alert('You got ' + count + ' questions correct out of 6.')
+alert('You got ' + count + ' questions correct out of 7.')
 
 if (userName !== null){
   alert(userName + ' now you know a little about me! Here is some more information about me.')
