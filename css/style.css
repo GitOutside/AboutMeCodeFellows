@@ -1,14 +1,18 @@
 body{
   background-color: rgb(245, 245, 245);
 }
-.container{
-  text-align: center;
+main{
   background-color: rgb(11, 11, 11);
 }
 h1{
+  text-align: center;
   color: rgb(214, 214, 253);
   
 }
-p{
-  color: rgb(245, 245, 175)
+ul li{
+  color: rgb(245, 245, 175);
+}
+#topTen{
+  text-align: left;
+  color: rgb(214, 214, 253);
 }
