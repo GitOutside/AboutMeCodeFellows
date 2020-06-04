@@ -144,6 +144,7 @@ function exercize (){
     }
   }
 }
+exercize ();
 
 alert('You got ' + count + ' questions correct out of 10.')
     
