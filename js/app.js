@@ -123,8 +123,8 @@ for(let i = 0; i < questionsArray.length; i++ ){
       }else{
         if (objExercises[favExerciseGuess]){
           count++;
-          alert('Congratulations! You got one of my top 4 favorite exercises!');
-          j = 6;
+          delete objExercises[favExerciseGuess];
+          favExerciseGuess = prompt('Congratulations, You got one of my four favorite exercises. What do you think are the other ones?').toLowerCase();
         }else{
           favExerciseGuess = prompt('Try again').toLowerCase();
         }
@@ -132,7 +132,7 @@ for(let i = 0; i < questionsArray.length; i++ ){
     }
 
 
-alert('You got ' + count + ' questions correct out of 7.')
+alert('You got ' + count + ' questions correct out of 10.')
 
 if (userName !== null){
   alert(userName + ' now you know a little about me! Here is some more information about me.')
