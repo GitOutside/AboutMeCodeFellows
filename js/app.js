@@ -1,11 +1,17 @@
 'use strict';
 let count = 0;
+function UserName(){
 var userName = prompt("What's your name?")
 if (userName !== null){
   alert('Welcome ' + userName + ', here are some questions to get to know me!');
 } else{
   alert('I do not know your name.');
 }
+
+return userName;
+}
+var logName = UserName();
+/*
 const questionsArray = ["truckColorQ", "houseColorQ", "hairColorQ", "birthPlaceQ", "beforeNinetiesQ"]
 for(let i = 0; i < questionsArray.length; i++ ){
   switch(questionsArray[i])
@@ -131,7 +137,6 @@ for(let i = 0; i < questionsArray.length; i++ ){
       }
     }
 
-
 alert('You got ' + count + ' questions correct out of 10.')
 
 if (userName !== null){
@@ -140,3 +145,4 @@ if (userName !== null){
   alert('I do not know your name, but here is some more information about me.');
 }
 
+*/
