@@ -95,7 +95,8 @@ function yesNo (){
   }
 }
 yesNo ();
-/*
+
+function favoriteN (){
   let favNumber = prompt('What do you think my favorite number is? hint: try from 0 to 15')
   const correctNumber = Math.floor(Math.random() * 16);
   for(let i = 0; i <= 3; i++){
@@ -115,37 +116,39 @@ yesNo ();
       }
     }
   }
+}
+favoriteN ();
 
-    let favExerciseGuess = prompt('What exercise is in my top four favorite?').toLowerCase();
-    const favExercises = ['squat', 'bench', 'deadlift', 'shoulder press'];
-    let objExercises = {};
-    for(let i of favExercises){ 
-      objExercises[i] =  (objExercises[i] || 0) +1;
-    }
-    for (let j = 0; j <=5; j++){
-      if(j === 5){
-        alert('My top four favorite exercises are '+ 
+function exercize (){
+  let favExerciseGuess = prompt('What exercise is in my top four favorite?').toLowerCase();
+  const favExercises = ['squat', 'bench', 'deadlift', 'shoulder press'];
+  let objExercises = {};
+  for(let i of favExercises){ 
+    objExercises[i] =  (objExercises[i] || 0) +1;
+  }
+  for (let j = 0; j <=5; j++){
+    if(j === 5){
+      alert('My top four favorite exercises are '+ 
         favExercises[0] + ", "+ 
         favExercises[1] + ", "+ 
         favExercises[2] + " and "+ 
         favExercises[3] + ".")
+    }else{
+      if (objExercises[favExerciseGuess]){
+        count++;
+        delete objExercises[favExerciseGuess];
+        favExerciseGuess = prompt('Congratulations, You got one of my four favorite exercises. What do you think are the other ones?').toLowerCase();
       }else{
-        if (objExercises[favExerciseGuess]){
-          count++;
-          delete objExercises[favExerciseGuess];
-          favExerciseGuess = prompt('Congratulations, You got one of my four favorite exercises. What do you think are the other ones?').toLowerCase();
-        }else{
-          favExerciseGuess = prompt('Try again').toLowerCase();
-        }
+        favExerciseGuess = prompt('Try again').toLowerCase();
       }
     }
+  }
+}
 
-    alert('You got ' + count + ' questions correct out of 10.')
+alert('You got ' + count + ' questions correct out of 10.')
     
-    if (userName !== null){
-      alert(userName + ' now you know a little about me! Here is some more information about me.')
-    } else{
-      alert('I do not know your name, but here is some more information about me.');
-    }
-    
-    */
+if (userName !== null){
+  alert(userName + ' now you know a little about me! Here is some more information about me.')
+} else{
+  alert('I do not know your name, but here is some more information about me.');
+}
